@@ -1,0 +1,97 @@
+- Ogni funzione deve essere preceduta da un commento che ne descrive l’obiettivo
+
+- Ogni funzione/variabile deve avere un nome significativo e non ambiguo (Auto documenta il codice)
+
+- Prestare particolare attenzione alle indentazioni in moo tale da rendere il codice più fluido e chiaro possibile
+
+- Inserire un commento all'inizio e alla fine di ogni funzione, nel primo dichiariamo il funzionamento, nell'ultimo la fine della funzione/blocco di codice
+
+- Dichiarare le costanti in MAIUSCOLO e le variabili locali in minuscolo, USA IL CAMEL CASE (numeroOperazioni)
+
+- Lasciare uno SPAZIO dopo la ', ' per rendere il codice più leggibile
+
+- Lasciare uno SPAZIO da entrami i lati degli operatori matematici/lamda, tranne tra seguenti operatori (==, !=,  >=, <=, =>) è un errore di sintassi
+
+- OIPL: Un istruzione per riga, (NO: int a; a = 10;)
+
+- In un blocco d'istruzioni con la stessa indentazione, inserire un a capo sensato per separare le varie istruzioni
+
+- Non utilizzare: parole chiave, numeri, caratteri speciali o caratteri accentati per nominare le variabili
+
+- Ridurre le funzioni troppo grandi in sottofunzioni
+
+- Inserire 2 a capo tra le diverse funzioni e le variabili globali
+
+- Il nome di una classe nn deve essere un verbo
+
+- Il nome delle funzioni devo essere dei verbi e riferirsi ai dati con cui operano, utilizzando lo standard del Javabean
+
+- Rendere i costruttori privati e utilizzare una funzione costruttiva al posto di new Costruttore
+
+- LE FUNZIONI DEVONO FARE UNA COSA SOLA, DEVONO FARLA BENE, E NON DEVONO FARE ALTRO
+
+- Non confondere dominio del problema col dominio di programmazione
+
+- Non fare gli spiritosi nel nominare le variabili
+
+- Costruite contesti per le variabili (classi) per non confondersi
+
+- Funzioni brevi di MAX 5 righe, il segreto sta nel dividere le funzioni nei diversi livelli di astrazione delle operazioni
+
+- Creare funzioni niladiche (nessun parametro) o monadiche (1 parametro) evitare triadica e poliadica
+
+- No alle funzioni con flag come parametri
+
+- Trasformare le triadi in oggetti dove possibile
+
+- Usare eccezioni al posto di codici di errore
+
+- Estrarre i blocchi try/catch dal codice, utilizzando delle funzioni per l'elaborazione dati e una funzione che gestisce gli errori
+
+- Principio DRY (Don't Repeat Yourself) non fare copia e incolla di parte di codice
+
+- Nessuno è in grado di scrivere codice pulito a nella prima bozza. Le funzioni vanno riviste e ottimizzate una volta concluse
+
+- Commento di apertura/chiusura di funzione sono se sono lunghe e annidate
+
+- Le funzioni che lavorano insieme bisogna metterle vicine per migliorare la leggibilità
+
+- Inserire le variabili locali sempre in cima alla funzione
+
+- Le funzioni chiamanti si trovano al di sopra di quelle chiamate (l'opposto di C, C++, Pascal)
+
+- Usate solo lettere maiuscole per i nomi di costanti simboliche. Questo evidenzia tali costanti in un programma
+
+- Nei nomi di costanti simboliche formati da più parole, separate le parole con sottolineature per favorirne la leggibilità
+
+
+
+
+Linee guida per C:
+
+- ! Usare la puts per la stampa a video senza parametri e la printf per la stampa a video con parametri (la printf può generare vulnerabilità)
+
+- Le righe col carattere '#' (include) vengono elaborate prima dalla CPU, nella seconda fase
+
+- !!! Per la gestione dei calcoli monetari utilizzare il tipo INT non Float/Double, perchè l'approssimazione/operazioni matematiche approssimano i centesimi
+
+- Le operazioni continue e break sono più performanti dei flag nei cicli
+
+- Nelle espressioni che usano l’operatore &&, fate in modo che la condizione con maggiori probabilità di essere falsa sia quella più a sinistra. Nelle espressioni che usano l’operatore || fate
+  in modo che la condizione con maggiori probabilità di essere vera sia quella più a sinistra. Questo può ridurre il tempo di esecuzione di un programma.
+
+- Specificare parametri di funzione dello stesso tipo come double x, y invece di double x, double y genera un errore di compilazione
+
+- Ridefinire un parametro come variabile locale in una funzione genera un errore di compilazione
+
+- Assegnare un valore a una costante di enumerazione dopo che è stata definita è un errore di sintassi
+
+- Usate solo lettere maiuscole nei nomi delle costanti di enumerazione per far sì che queste costanti risaltino in un programma e per indicare che non sono delle variabili
+
+- Definire una variabile globale invece che locale permette che si verifichino effetti secondari non voluti quando una funzione che non ha necessità di accedere alla variabile la modifica accidentalmente o intenzionalmente
+
+- Inizializza sempre un array a {0} per evitare letture sporche
+
+- Definire la dimensione degli array con costanti simboliche rende i programmi più modificabili
+
+- Nel passaggio di un array a una funzione, includere come secondo parametro la lunghezza dell'array

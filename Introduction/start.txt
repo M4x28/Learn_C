@@ -1,0 +1,19 @@
+Che differenza c'è tra un linguaggio di programmazione interpretato è uno compilato?
+La compilazione traduce tutte le istruzioni di un programma in linguaggio macchina, creando un file eseguibile dal computer. La compilazione viene eseguita da un software compilatore. L'interpretazione traduce ed esegue ogni singola istruzione del programma.
+
+Qual è la differenza tra compilatore e interprete?
+A differenza di un interprete, un compilatore non esegue il programma che riceve in ingresso, ma lo traduce in linguaggio macchina (memorizzando su file il codice oggetto pronto per l'esecuzione diretta da parte del processore).
+
+Quale vantaggio offre un linguaggio compilato?
+UN linguaggio compilato (C, Go,...) non ha bisogno di un interprete apposito, ciò rende più veloce l'esecuzione del programma. Dato che il compilatore genera un eseguibile in binario diretamente eseguibile mentre l'interprete ogni volta deve tradurre ed eseguire riga per riga il codice.
+
+Linguaggio tipizzato staticamente, tipizzato dinamicamente e non tipizzato
+Tipizzazione statica quando a una variabile viene associato rigidamente un tipo che rimane lo stesso per tutto il programma e di "tipizzazione dinamica" quando una variabile può cambiare tipo durante l'esecuzione del programma. Non tipizzato quando non dev'essere specificato il tipo di variabile (Python)
+
+Fasi dello sviluppo di un programma:
+1 editing e creazione del codice
+2 preprocessore ed elaborazione del codice (la CPU definisce le operazioni che hanno priorità su altre)
+3 compilazione: creazione del codice oggetto
+4 linking delle librerie necessarie per l'esecuzione e creazione dell'eseguibile
+5 loader: carica il programma in memoria
+6 la CPU esegue le istruzioni in memoria
