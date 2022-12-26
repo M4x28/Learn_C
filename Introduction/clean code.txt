@@ -64,6 +64,7 @@
 
 - Nei nomi di costanti simboliche formati da più parole, separate le parole con sottolineature per favorirne la leggibilità
 
+- Quando passate un array a una funzione, passate anche la dimensione dell’array. Questo contribuisce a rendere la funzione riutilizzabile in molti programmi.
 
 
 
@@ -95,3 +96,36 @@ Linee guida per C:
 - Definire la dimensione degli array con costanti simboliche rende i programmi più modificabili
 
 - Nel passaggio di un array a una funzione, includere come secondo parametro la lunghezza dell'array
+
+- Inizializzare i puntatori a NULL (<stdio.h>) o a 0
+
+- Principio del privilegio minimo: date sempre a una funzione un accesso ai dati nei suoi parametri sufficiente per portare a termine il suo compito
+  specifico, ma assolutamente null’altro
+
+- Quando passate a funzioni oggetti di grandi dimensioni, come le strutture, utilizzate puntatori
+  a dati costanti in modo da ottenere i benefici in termini di prestazioni del passaggio per riferimento e la sicurezza del passaggio per valore.
+
+- Mettere i prototipi di funzione nelle definizioni di altre funzioni è un’applicazione del principio
+  del privilegio minimo, perché ciò limita le chiamate appropriate di una funzione alle funzioni
+  in cui compaiono i prototipi
+
+- Far riferimento a un valore per mezzo di un puntatore si dice indirezione
+
+- L’operatore di indirezione *, comunemente detto operatore di dereferenziazione, restituisce il valore dell’oggetto al quale punta il suo operando (operazione di dereferenzazione)
+
+- L’operatore d'indirizzo & è un operatore unario che restituisce l’indirizzo del suo operando
+
+- Un puntatore void * non può essere dereferenziato
+
+- Se il parametro di una funzione punta a un valore che non verrà cambiato dalla funzione, si deve usare const per indicare che i dati sono costanti
+
+- Libreria trattamento caratteri <ctype.h>
+
+- Libreria conversione stringhe <stdlib.h>
+
+- Libreria gestione I/O stringhe <stdio.h>
+
+- Specifiche di conversione sono composte da: flag (indicatori), larghezze di campo, precisioni, caratteri letterali e %
+
+- Virgolette "" e apici '' sono differenti in C, perchè mentre le prime alla stringa racchiusa aggiunge anche il carattere \0 gli apici non lo fanno
+  perciò vengono usati per i caratteri singoli

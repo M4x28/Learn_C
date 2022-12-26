@@ -32,7 +32,7 @@ int main(void) {
         scanf_s("%d", &nAnniStima, sizeof(nAnniStima));
 
         // Non e' 0.1% annuo ma varia, in media si calcola che sia 0.1% annuo
-        puts("Nel 2022 la crescita della popolazione mondiale e' pari all'1 percento annuo, statisticamente si e' dimostrato che questa percentuale diminuisce delll'0.1 percento ogni anno.");
+        puts("Nel 2022 la crescita della popolazione mondiale e' pari all'1%% annuo, statisticamente si e' dimostrato che questa percentuale diminuisce delll'0.1%% ogni anno.");
 
         for (unsigned int i = 1; i <= nAnniStima; i++)
             printf_s("La popolazione nel %d sara' di: %f miliardi\n", annoCorrente + i, stimaPopolazione(popolazioneAttuale, i));
@@ -45,7 +45,7 @@ int main(void) {
         printf_s("Inserisci la popolazione Mondiale del secondo anno in miliardi: ");
         scanf_s("%f", &popolazioneSecondoAnno, sizeof(popolazioneSecondoAnno));
 
-        printf_s("La crescita demografica tra i due anni e' del %.3f percento.", differenzaDemograficaInPercentuale(popolazionePrimoAnno, popolazioneSecondoAnno));
+        printf_s("La crescita demografica tra i due anni e' del %.3f%%.", differenzaDemograficaInPercentuale(popolazionePrimoAnno, popolazioneSecondoAnno));
     }
 
     return 0;
