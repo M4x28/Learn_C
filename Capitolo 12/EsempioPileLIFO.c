@@ -95,7 +95,7 @@ void push(StackNodePtr *topPtr, int info) {
 
 // rimuovi un nodo dalla cima della pila
 int pop(StackNodePtr *topPtr) {
-    StackNodePtr tempPtr; = *topPtr;
+    StackNodePtr tempPtr = *topPtr;
     int popValue = (*topPtr)->data;
     *topPtr = (*topPtr)->nextPtr;
     free(tempPtr);
