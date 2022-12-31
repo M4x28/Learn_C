@@ -129,3 +129,59 @@ Linee guida per C:
 
 - Virgolette "" e apici '' sono differenti in C, perchè mentre le prime alla stringa racchiusa aggiunge anche il carattere \0 gli apici non lo fanno
   perciò vengono usati per i caratteri singoli
+
+- L'operatore di membro di struttura (.), chiamato anche operatore punto
+
+- Il comando typedef viene utilizzato per assegnare un nuovo nome ad un tipo di dato esistente. Ad esempio, si può usare
+typedef per creare un sinonimo per un tipo di dato complesso, come ad esempio una struttura o un union.
+
+- i dati contenuti in una union vengono sovrascritti ad ogni modifica
+
+- La tilde in C effettua il complemento a 1 bit per bit
+
+- La parola chiave enum crea delle costati di enumerazione rappresentate da identificatori. I valori tipicamente partono da 0 a meno che
+    non vega specificato diversamente nella dichiarazione.
+
+- Le costanti di enumerazione non sono variabili e buona pratica scrivele in stampatello per confonderle con le variabili normali
+
+- Strutture e union devono essere nominate con la prima lettera maiuscola (come la OOP) per differenziare questi tipi di dati dalle variabili
+
+- Quando si apre un file, esso viene associato a uno stream.
+
+- Quando si esegue un programma si aprono 3 stream: standard input, standard output, standard error
+
+- La funzione fclose riceve come argomento il puntatore a file non il nome del file
+
+- Modalità di apertura file:
+    lettura se esiste (r)
+    scrittura se esiste (w)
+    aggiunta se esiste (a)
+    lettura e scrittura (r+)
+    scrittura se esiste elimina ciò che c'è già dentro altrimenti crea uno nuovo(w+)
+    apre e aggiunge altrimenti crea uno nuovo (a+)
+    lettura file esistente in forma binaria (rb)
+    scrittura file esistente in forma binaria (wb)
+    aggiunta file esistente in forma binaria (ab)
+    lettura e scrittura in forma binaria (rb+)
+    scrittura se esiste altrimenti crea in forma binaria (wb+)
+    aggiungi se esiste altrimenti crea in forma binaria (ab+)
+    SICUREZZA FILE
+    wx, wx+, wbx, wbx+, sono modalità di apertura file in scrittura che garantiscono l'esclusività. In queste modalità
+    fopen fallirà se il file esiste già o non può essere creato.
+    Nel caso in cui venga creato il file, il SO garantisce l'esclusività di scrittura sul file solamente al nostro processo finchè è aperto.
+
+- La funzione rewind prende come argomento il puntatore al file e ci permette di "riavvolgere la bobina"
+
+- Nel codice a livello industriale si preferisce utilizzare fseek(filePtr, 0, SEEEK_SET) piuttosto che la funzione rewind, questo perchè
+    quest'ultima non ritorna alcun valore in caso di errore mentre la prima ritornerà un intero != 0
+
+- Per via di differenze nelle rappresentazioni di dati binari su diverse piattaforme, spesso i file scritti in formato binario non sono portabili.
+
+- Alcune funzioni di libreria non operano in maniera identica sui file di testo e sui file binari.
+    In particolare, non si è sicuri che la funzione fseek lavori correttamente con i file binari se si specifica SEEK_END, pertanto è preferibile usare SEEK_SET.
+
+- Occorre sempre chiudere un file non appena esso non è più necessario per il proprio programma.
+
+- La funzione malloc viene usata normalmente con l’operatore sizeof. Ad esempio, l’istruzione: newPtr = malloc(sizeof(struct node));
+
+- La funzione free libera la memoria, ossia la memoria viene restituita al sistema: free(newPtr);
