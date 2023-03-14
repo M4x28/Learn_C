@@ -19,7 +19,7 @@ int main() {
             {1300, 1400, 1500, 1600, 1700},
             {1200, 1300, 1400, 1500, 1600}
     };
-
+    
     float medieSoggetti[RIGHE];
     for (int i = 0; i < RIGHE; i++) {
         medieSoggetti[i] = media(calorie[i], COLONNE);
