@@ -66,7 +66,31 @@
 
 - Quando passate un array a una funzione, passate anche la dimensione dell’array. Questo contribuisce a rendere la funzione riutilizzabile in molti programmi.
 
+- eliminare i commenti di vecchi pezzi di codice non utilizzate
 
+- evitare di usare i commenti per indicare metadati del file come proprietario, desc,...
+
+- EVITARE COME LA PESTE I COMMENTI CHE DESCRIVONO UN QUALCOSA CHE E' GIA' AUTODESCRITTIVO sono ridondanti
+
+- Un commento o lo inseirsci e gli dedichi il giusto tempo per far sì che sia ben fatto altrimenti è meglio evitare
+ perché confonde solo le idee
+
+- I test devono essere eseguiti tutti con un solo comando, meglio ancora se vengono lanciati tutti i test facendo click su un solo pulsante dell'IDE 
+
+- Una funzione deve avere AL MASSIMO 3 ARGOMENTI, meno argomenti vengono passati megliore è la qualità della funzione
+
+- Variabili booleane come parametri == RED FLAG == la funzione fa più di una cosa.
+
+- Funzioni che non vengono mai richiamate dovrebbero essere eliminte perchè mantenerle è confuzionario e uno spreco.
+
+- Più linguaggi in un file sorgene == confuzione
+
+- DRY Don't Repeat Yourself, se una funzione è già presente perchè dobbiamo crearne un'altra? UNA E buona
+  OGNI VOLTA CHE VEDETE DELLE DUPLICAZIONI DI CODICE AVETE TROVATO UNA MANCATA OPPORTUNITA' DI ASTRAZIONE
+
+- variabili e funzioni vanno dichiarate vicino al loro utilizzo. Una funzione che utilizza al suo interno altre funzioni si dovrebbe trovare al di sotto della dichiarazione delle funzioni che utilizza.
+
+-
 
 Linee guida per C:
 
