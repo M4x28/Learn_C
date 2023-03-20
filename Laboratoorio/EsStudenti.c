@@ -42,17 +42,17 @@ void acquisisciStudenteEVoti(Studente *studente);
 void acquisisciVotiStudente(Studente *studente);
 void acquisisciVoto(Studente *studente, int votoIndex);
 bool controllaData(int giorno, int mese, int anno);
-void calcolaEVisualizzaMedia(Studente *studenti, int nStudenti);
-float calcolaMedia(Studente studente);
+void calcolaEVisualizzaMedia(const Studente *studenti, int nStudenti);
+float calcolaMedia(const Studente *studente);
 void generaDataDiNascita(Studente *s);
 void generaNomeCognome(Studente *s);
 void generaVoti(Studente *s);
 void popolaStudente(Studente *s);
 void popolaStudenti(Studente studenti[], int n);
-Studente *trovaStudenteMigliore(Studente studenti[], int n);
-void visualizzaMedia(Studente studente, float media);
-void visualizzaStudente(Studente s);
-void visualizzaStudenti(Studente studenti[], int n);
+Studente *trovaStudenteMigliore(const Studente studenti[], int n);
+void visualizzaMedia(const Studente *studente, float media);
+void visualizzaStudente(const Studente *s);
+void visualizzaStudenti(const Studente studenti[], int n);
 
 
 int main() {
@@ -72,25 +72,25 @@ int main() {
 
     // Visualizzo lo studente con la media più alta
     printf("\nLo studente con media maggiore e':\n");
-    visualizzaStudente(*studenteMigliore);
+    visualizzaStudente(studenteMigliore);
 
     return 0;
 }
 
 
-void visualizzaStudente(Studente s)
+void visualizzaStudente(const Studente *s)
 {
-    printf("Nome: %s\n", s.nome);
-    printf("Cognome: %s\n", s.cognome);
-    printf("Data di nascita: %d/%d/%d\n", s.dataDiNascita.giorno, s.dataDiNascita.mese, s.dataDiNascita.anno);
+    printf("Nome: %s\n", s->nome);
+    printf("Cognome: %s\n", s->cognome);
+    printf("Data di nascita: %d/%d/%d\n", s->dataDiNascita.giorno, s->dataDiNascita.mese, s->dataDiNascita.anno);
     printf("\n");
 }
 
-void visualizzaStudenti(Studente studenti[], int n)
+void visualizzaStudenti(const Studente studenti[], int n)
 {
     printf("Elenco Studenti:\n");
     for (int i = 0; i < n; i++)
-        visualizzaStudente(studenti[i]);
+        visualizzaStudente(&studenti[i]);
 }
 
 void acquisisciVotiStudente(Studente *studente) {
@@ -165,28 +165,28 @@ bool controllaData(int giorno, int mese, int anno) {
     return true;
 }
 
-float calcolaMedia(Studente studente) {
+float calcolaMedia(const Studente *studente) {
     float somma = 0;
     for (int i = 0; i < N_VOTI; i++)
-        somma += studente.voti[i].voto;
+        somma += studente->voti[i].voto;
     return somma / N_VOTI;
 }
 
-void visualizzaMedia(Studente studente, float media) {
-    printf("La media dei voti dello studente %s %s e': %.2f\n", studente.nome, studente.cognome, media);
+void visualizzaMedia(const Studente *studente, float media) {
+    printf("La media dei voti dello studente %s %s e': %.2f\n", studente->nome, studente->cognome, media);
 }
 
-void calcolaEVisualizzaMedia(Studente *studenti, int nStudenti) {
+void calcolaEVisualizzaMedia(const Studente *studenti, int nStudenti) {
     for (int i = 0; i < nStudenti; i++)
-        visualizzaMedia(studenti[i], calcolaMedia(studenti[i]));
+        visualizzaMedia(&studenti[i], calcolaMedia(&studenti[i]));
 }
 
-Studente* trovaStudenteMigliore(Studente studenti[], int n) {
+Studente* trovaStudenteMigliore(const Studente studenti[], int n) {
     Studente *studenteMigliore = &studenti[0];
-    float mediaMigliore = calcolaMedia(studenti[0]);
+    float mediaMigliore = calcolaMedia(&studenti[0]);
 
     for (int i = 1; i < n; i++) {
-        float media = calcolaMedia(studenti[i]);
+        float media = calcolaMedia(&studenti[i]);
         if (media > mediaMigliore) {
             mediaMigliore = media;
             studenteMigliore = &studenti[i];
