@@ -6,19 +6,9 @@
  *  Author: Leonardo Birardi
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "Headers.h"
 #include "Client.h"
 
-#if defined WIN32
-#include <winsock.h>
-#else
-#define closesocket close
-#include <sys/socket.h>
-#include <arpa/inet.h>
-#include <unistd.h>
-#endif
 
 // Function prototypes
 struct sockaddr_in bindSocket(struct sockaddr_in);
@@ -234,13 +224,25 @@ void checkWindowDevice() {
  */
 void inputString(char *msg) {
 	printf("\nEnter the commands to send to the server: ");
-	// Use fgets to read an entire line, including spaces
-	fgets(msg, BUFFERSIZE, stdin);
 
-	// Remove the trailing newline character if present
-	size_t length = strlen(msg);
-	if (length > 0 && msg[length - 1] == '\n') {
-		msg[length - 1] = '\0';
+	// Use fgets to read an entire line, including spaces
+	if (fgets(msg, BUFFERSIZE, stdin) != NULL) {
+	    // Check if the input exceeds BUFFERSIZE
+	    if (!strchr(msg, '\n')) {
+	        // Input exceeds BUFFERSIZE, clear the input buffer
+	        int c;
+	        while ((c = getchar()) != '\n' && c != EOF);
+	        printf("Input too long. Please enter commands less than %d characters.\n", BUFFERSIZE);
+	    } else {
+	        // Remove the trailing newline character if present
+	        size_t length = strlen(msg);
+	        if (length > 0 && msg[length - 1] == '\n') {
+	            msg[length - 1] = '\0';
+	        }
+	    }
+	} else {
+	    // fgets failed, handle the error
+	    printf("Error reading input.\n");
 	}
 
 	// Check if the input string length is within limits

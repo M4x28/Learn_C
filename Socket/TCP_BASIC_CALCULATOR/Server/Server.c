@@ -6,24 +6,9 @@
  *  Author: Leonardo Birardi
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "Headers.h"
 #include "Server.h"
 #include "Calculator.h"
-
-#if defined WIN32
-#include <winsock.h>
-#else
-#include <string.h>
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <arpa/inet.h>
-#include <netinet/in.h>
-#include <netdb.h>
-#define closesocket close
-#endif
 
 // Function prototypes
 struct sockaddr_in bindSocket(int, struct sockaddr_in);
