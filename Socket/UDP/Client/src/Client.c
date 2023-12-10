@@ -172,6 +172,7 @@ void closeConnection(int c_socket) {
 #ifdef _WIN32
     system("pause");  // Windows specific command
 #else
+    printf("Press any key to close the process...");
     getchar();  // Unix-like systems command
 #endif
 }
