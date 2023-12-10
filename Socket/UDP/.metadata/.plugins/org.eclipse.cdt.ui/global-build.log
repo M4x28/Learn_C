@@ -1,0 +1,2866 @@
+12:05:07 **** Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:155:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  155 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/Client.c: In function ‘main’:
+../src/Client.c:49:25: warning: ‘host_input’ may be used uninitialized [-Wmaybe-uninitialized]
+   49 |                         sprintf(host_input[1], "%d", PROTOPORT);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Client.c:36:23: note: ‘host_input’ declared here
+   36 |                 char *host_input[2];
+      |                       ^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+12:05:08 **** Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Calculator.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Calculator.d" -MT"src/Calculator.o" -o "src/Calculator.o" "../src/Calculator.c"
+Finished building: ../src/Calculator.c
+ 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:57:118: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   57 |                 int bytes_received = recvfrom(my_socket, msg, sizeof(char) * BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                                      ^~~~~~~~~~~
+      |                                                                                                                      |
+      |                                                                                                                      int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+12:16:30 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Calculator.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Calculator.d" -MT"src/Calculator.o" -o "src/Calculator.o" "../src/Calculator.c"
+Finished building: ../src/Calculator.c
+ 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:57:118: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   57 |                 int bytes_received = recvfrom(my_socket, msg, sizeof(char) * BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                                      ^~~~~~~~~~~
+      |                                                                                                                      |
+      |                                                                                                                      int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+12:43:56 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:43:56 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:57:118: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   57 |                 int bytes_received = recvfrom(my_socket, msg, sizeof(char) * BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                                      ^~~~~~~~~~~
+      |                                                                                                                      |
+      |                                                                                                                      int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/Server.c: In function ‘bindSocket’:
+../src/Server.c:143:20: error: incompatible types when returning type ‘int’ but ‘struct sockaddr_in’ was expected
+  143 |             return -1;
+      |                    ^
+make: *** [src/subdir.mk:23: src/Server.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:44:14 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:44:14 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:57:118: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   57 |                 int bytes_received = recvfrom(my_socket, msg, sizeof(char) * BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                                      ^~~~~~~~~~~
+      |                                                                                                                      |
+      |                                                                                                                      int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+12:47:02 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:47:03 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:57:118: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   57 |                 int bytes_received = recvfrom(my_socket, msg, sizeof(char) * BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                                      ^~~~~~~~~~~
+      |                                                                                                                      |
+      |                                                                                                                      int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+12:47:15 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:47:15 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:47:22 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:47:22 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Calculator.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Calculator.d" -MT"src/Calculator.o" -o "src/Calculator.o" "../src/Calculator.c"
+Finished building: ../src/Calculator.c
+ 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:57:118: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   57 |                 int bytes_received = recvfrom(my_socket, msg, sizeof(char) * BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                                      ^~~~~~~~~~~
+      |                                                                                                                      |
+      |                                                                                                                      int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+12:52:47 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:52:48 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:57:118: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   57 |                 int bytes_received = recvfrom(my_socket, msg, sizeof(char) * BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                                      ^~~~~~~~~~~
+      |                                                                                                                      |
+      |                                                                                                                      int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+12:53:15 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:53:15 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:57:118: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   57 |                 int bytes_received = recvfrom(my_socket, msg, sizeof(char) * BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                                      ^~~~~~~~~~~
+      |                                                                                                                      |
+      |                                                                                                                      int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+13:06:18 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:06:18 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:58:118: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   58 |                 int bytes_received = recvfrom(my_socket, msg, sizeof(char) * BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                                      ^~~~~~~~~~~
+      |                                                                                                                      |
+      |                                                                                                                      int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+13:07:45 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:07:46 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:58:118: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   58 |                 int bytes_received = recvfrom(my_socket, msg, sizeof(char) * BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                                      ^~~~~~~~~~~
+      |                                                                                                                      |
+      |                                                                                                                      int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+13:20:09 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/Client.c: In function ‘main’:
+../src/Client.c:48:17: warning: ‘host_input’ may be used uninitialized [-Wmaybe-uninitialized]
+   48 |                 sprintf(host_input[1], "%d", PROTOPORT);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Client.c:36:15: note: ‘host_input’ declared here
+   36 |         char *host_input[2];
+      |               ^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+13:20:09 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:21:27 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/Client.c: In function ‘main’:
+../src/Client.c:48:17: warning: ‘host_input’ may be used uninitialized [-Wmaybe-uninitialized]
+   48 |                 sprintf(host_input[1], "%d", PROTOPORT);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Client.c:36:15: note: ‘host_input’ declared here
+   36 |         char *host_input[2];
+      |               ^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+13:21:28 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:24:50 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:151:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  151 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/Client.c: In function ‘main’:
+../src/Client.c:49:17: warning: ‘host_input’ may be used uninitialized [-Wmaybe-uninitialized]
+   49 |                 sprintf(host_input[1], "%d", PROTOPORT);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Client.c:36:15: note: ‘host_input’ declared here
+   36 |         char *host_input[2];
+      |               ^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+13:24:51 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:31:21 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘main’:
+../src/Client.c:48:31: warning: assignment to ‘char *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+   48 |                 host_input[1] = PROTOPORT;
+      |                               ^
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+13:31:21 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:31:27 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:31:28 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:32:07 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+13:32:08 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:36:57 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:36:57 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:40:49 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:151:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  151 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+13:40:50 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+14:47:42 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:152:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  152 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+14:47:42 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+14:50:25 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:151:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  151 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+14:50:26 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+14:50:29 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+14:50:30 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:16:19 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+15:16:19 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:17:51 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+15:17:51 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:18:05 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:18:05 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:21:02 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+15:21:02 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:23:30 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+15:23:30 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:30:39 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:30:39 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:59:118: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   59 |                 int bytes_received = recvfrom(my_socket, msg, sizeof(char) * BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                                      ^~~~~~~~~~~
+      |                                                                                                                      |
+      |                                                                                                                      int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+15:32:00 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:32:01 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:59:118: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   59 |                 int bytes_received = recvfrom(my_socket, msg, sizeof(char) * BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                                      ^~~~~~~~~~~
+      |                                                                                                                      |
+      |                                                                                                                      int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+11:15:31 **** Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+11:15:32 **** Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:46:118: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   46 |                 int bytes_received = recvfrom(my_socket, msg, sizeof(char) * BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                                      ^~~~~~~~~~~
+      |                                                                                                                      |
+      |                                                                                                                      int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+11:16:39 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:18:02 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+11:18:02 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:18:34 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+11:18:34 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:19:22 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+11:19:22 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:20:46 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+11:20:47 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:21:53 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+11:21:53 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:22:22 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+11:22:23 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:22:59 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:23:00 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:24:09 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/Client.c: In function ‘inputString’:
+../src/Client.c:259:26: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
+  259 |                 printf("%d", length);
+      |                         ~^   ~~~~~~
+      |                          |   |
+      |                          int size_t {aka long unsigned int}
+      |                         %ld
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+11:24:10 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:25:14 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+11:25:15 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:26:34 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+11:26:35 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:27:25 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+11:27:25 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:27:52 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+11:27:52 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:28:29 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+11:28:30 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:28:56 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+11:28:56 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:30:23 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+11:30:24 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:32:56 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:149:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  149 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+11:32:57 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:36:07 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:151:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  151 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+11:36:07 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:48:32 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:150:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  150 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+11:48:32 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:49:12 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:147:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  147 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+11:49:13 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:49:25 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:49:25 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:56:00 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘main’:
+../src/Client.c:75:17: error: too few arguments to function ‘receiveData’
+   75 |                 receiveData(c_socket, sizeof(char) * BUFFERSIZE, msg, &echoServAddr);
+      |                 ^~~~~~~~~~~
+../src/Client.c:21:5: note: declared here
+   21 | int receiveData(int, int, char *msg, struct sockaddr_in*, int*);
+      |     ^~~~~~~~~~~
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:147:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  147 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+make: *** [src/subdir.mk:20: src/Client.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:56:00 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:57:50 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘main’:
+../src/Client.c:75:86: warning: passing argument 5 of ‘receiveData’ makes pointer from integer without a cast [-Wint-conversion]
+   75 |                 receiveData(c_socket, sizeof(char) * BUFFERSIZE, msg, &echoServAddr, client_len);
+      |                                                                                      ^~~~~~~~~~
+      |                                                                                      |
+      |                                                                                      int
+../src/Client.c:21:59: note: expected ‘int *’ but argument is of type ‘int’
+   21 | int receiveData(int, int, char *msg, struct sockaddr_in*, int*);
+      |                                                           ^~~~
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:147:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  147 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+11:57:50 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:58:01 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+11:58:01 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:01:59 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘main’:
+../src/Client.c:73:33: warning: passing argument 5 of ‘receiveData’ makes pointer from integer without a cast [-Wint-conversion]
+   73 |                                 client_len);
+      |                                 ^~~~~~~~~~
+      |                                 |
+      |                                 int
+../src/Client.c:20:59: note: expected ‘int *’ but argument is of type ‘int’
+   20 | int receiveData(int, int, char *msg, struct sockaddr_in*, int*);
+      |                                                           ^~~~
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:149:33: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  149 |                                 client_len)) <= 0) {
+      |                                 ^~~~~~~~~~
+      |                                 |
+      |                                 int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+12:01:59 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:07:10 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘main’:
+../src/Client.c:75:86: warning: passing argument 5 of ‘receiveData’ makes pointer from integer without a cast [-Wint-conversion]
+   75 |                 receiveData(c_socket, sizeof(char) * BUFFERSIZE, msg, &echoServAddr, client_len);
+      |                                                                                      ^~~~~~~~~~
+      |                                                                                      |
+      |                                                                                      int
+../src/Client.c:21:59: note: expected ‘int *’ but argument is of type ‘int’
+   21 | int receiveData(int, int, char *msg, struct sockaddr_in*, int*);
+      |                                                           ^~~~
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:147:95: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+  147 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+12:07:10 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:46:118: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   46 |                 int bytes_received = recvfrom(my_socket, msg, sizeof(char) * BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                                      ^~~~~~~~~~~
+      |                                                                                                                      |
+      |                                                                                                                      int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+12:08:00 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:147:95: warning: passing argument 6 of ‘recvfrom’ makes pointer from integer without a cast [-Wint-conversion]
+  147 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+12:08:01 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:10:03 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:147:95: warning: passing argument 6 of ‘recvfrom’ makes pointer from integer without a cast [-Wint-conversion]
+  147 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+12:10:03 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:10:44 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:147:95: warning: passing argument 6 of ‘recvfrom’ makes pointer from integer without a cast [-Wint-conversion]
+  147 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+12:10:44 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:11:28 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:147:95: warning: passing argument 6 of ‘recvfrom’ makes pointer from integer without a cast [-Wint-conversion]
+  147 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+12:11:29 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:12:05 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:147:95: warning: passing argument 6 of ‘recvfrom’ makes pointer from integer without a cast [-Wint-conversion]
+  147 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+12:12:06 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:13:16 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:147:95: warning: passing argument 6 of ‘recvfrom’ makes pointer from integer without a cast [-Wint-conversion]
+  147 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+12:13:17 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:17:03 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:17:40 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:17:50 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:18:41 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:39:41 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:39:42 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:46:103: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   46 |                 int bytes_received = recvfrom(my_socket, msg, BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                       ^~~~~~~~~~~
+      |                                                                                                       |
+      |                                                                                                       int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+12:41:17 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:41:18 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:45:04 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:45:05 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:46:103: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   46 |                 int bytes_received = recvfrom(my_socket, msg, BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                       ^~~~~~~~~~~
+      |                                                                                                       |
+      |                                                                                                       int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+12:45:24 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:45:24 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:51:03 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:147:95: warning: passing argument 6 of ‘recvfrom’ makes pointer from integer without a cast [-Wint-conversion]
+  147 |                                 string_len - total_bytes_received, 0, (struct sockaddr*) sad, client_len)) <= 0) {
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Client.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+12:51:03 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:54:24 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+12:54:24 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:09:01 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:144:25: error: ‘echoServAddr’ is a pointer; did you mean to use ‘->’?
+  144 |         if (echoServAddr.sin_addr.s_addr != fromAddr.sin_addr.s_addr)
+      |                         ^
+      |                         ->
+../src/Client.c:144:53: error: ‘fromAddr’ is a pointer; did you mean to use ‘->’?
+  144 |         if (echoServAddr.sin_addr.s_addr != fromAddr.sin_addr.s_addr)
+      |                                                     ^
+      |                                                     ->
+make: *** [src/subdir.mk:20: src/Client.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:09:02 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:10:12 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘receiveData’:
+../src/Client.c:144:35: error: invalid type argument of ‘->’ (have ‘struct in_addr’)
+  144 |         if (echoServAddr->sin_addr->s_addr != fromAddr->sin_addr->s_addr)
+      |                                   ^~
+../src/Client.c:144:65: error: invalid type argument of ‘->’ (have ‘struct in_addr’)
+  144 |         if (echoServAddr->sin_addr->s_addr != fromAddr->sin_addr->s_addr)
+      |                                                                 ^~
+make: *** [src/subdir.mk:20: src/Client.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:10:12 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:10:31 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+13:10:31 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:11:19 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:11:19 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:12:10 **** Clean-only build of configuration Debug for project Client ****
+make clean 
+rm -rf ./src/Client.d ./src/Client.o
+rm -rf Client
+ 
+13:12:10 **** Clean-only build of configuration Debug for project Server ****
+make clean 
+rm -rf ./src/Calculator.d ./src/Calculator.o ./src/Server.d ./src/Server.o
+rm -rf Server
+ 
+13:12:15 **** Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+13:12:15 **** Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Calculator.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Calculator.d" -MT"src/Calculator.o" -o "src/Calculator.o" "../src/Calculator.c"
+Finished building: ../src/Calculator.c
+ 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:46:103: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   46 |                 int bytes_received = recvfrom(my_socket, msg, BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                       ^~~~~~~~~~~
+      |                                                                                                       |
+      |                                                                                                       int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+13:14:15 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:14:15 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:46:103: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   46 |                 int bytes_received = recvfrom(my_socket, msg, BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                       ^~~~~~~~~~~
+      |                                                                                                       |
+      |                                                                                                       int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/Server.c:47:26: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘int *’ [-Wformat=]
+   47 |                 printf("%d", &bytes_received);
+      |                         ~^   ~~~~~~~~~~~~~~~
+      |                          |   |
+      |                          int int *
+      |                         %ls
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+13:14:26 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:14:26 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:46:103: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   46 |                 int bytes_received = recvfrom(my_socket, msg, BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                       ^~~~~~~~~~~
+      |                                                                                                       |
+      |                                                                                                       int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+13:25:18 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:26:22 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:31:16 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+13:31:17 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:32:00 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+13:32:00 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+14:42:36 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+14:42:36 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:47:103: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   47 |                 int bytes_received = recvfrom(my_socket, msg, BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                       ^~~~~~~~~~~
+      |                                                                                                       |
+      |                                                                                                       int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+14:42:55 **** Clean-only build of configuration Debug for project Client ****
+make clean 
+rm -rf ./src/Client.d ./src/Client.o
+rm -rf Client
+ 
+14:42:55 **** Clean-only build of configuration Debug for project Server ****
+make clean 
+rm -rf ./src/Calculator.d ./src/Calculator.o ./src/Server.d ./src/Server.o
+rm -rf Server
+ 
+14:42:57 **** Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+14:42:58 **** Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Calculator.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Calculator.d" -MT"src/Calculator.o" -o "src/Calculator.o" "../src/Calculator.c"
+Finished building: ../src/Calculator.c
+ 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:47:103: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   47 |                 int bytes_received = recvfrom(my_socket, msg, BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                       ^~~~~~~~~~~
+      |                                                                                                       |
+      |                                                                                                       int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+14:43:01 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+14:43:40 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:47:103: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   47 |                 int bytes_received = recvfrom(my_socket, msg, BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                       ^~~~~~~~~~~
+      |                                                                                                       |
+      |                                                                                                       int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+14:44:26 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+14:44:26 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:46:103: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   46 |                 int bytes_received = recvfrom(my_socket, msg, BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                       ^~~~~~~~~~~
+      |                                                                                                       |
+      |                                                                                                       int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+14:44:52 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+14:50:37 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+14:50:37 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+14:50:57 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+14:50:57 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+14:51:07 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:46:103: warning: pointer targets in passing argument 6 of ‘recvfrom’ differ in signedness [-Wpointer-sign]
+   46 |                 int bytes_received = recvfrom(my_socket, msg, BUFFERSIZE, 0, (struct sockaddr*) &cad, &client_len);
+      |                                                                                                       ^~~~~~~~~~~
+      |                                                                                                       |
+      |                                                                                                       int *
+In file included from /usr/include/netinet/in.h:23,
+                 from /usr/include/netdb.h:27,
+                 from ../src/Headers.h:14,
+                 from ../src/Server.c:9:
+/usr/include/sys/socket.h:165:48: note: expected ‘socklen_t * restrict’ {aka ‘unsigned int * restrict’} but argument is of type ‘int *’
+  165 |                          socklen_t *__restrict __addr_len);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+14:52:17 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+14:52:17 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+14:52:21 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+14:53:08 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+14:54:05 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+14:56:41 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+14:56:41 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+14:56:45 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+14:58:50 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+14:58:50 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+15:03:32 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:03:32 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+15:06:52 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+15:06:52 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:30:45 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+15:30:46 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:30:53 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:33:30 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+15:33:30 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:33:41 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:33:41 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:33:46 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:40:27 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:40:27 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+15:42:55 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:42:55 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:43:44 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:43:44 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+15:44:16 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:44:17 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:44:41 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:44:41 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+15:44:59 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:45:00 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:46:14 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:46:14 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+15:46:29 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:48:45 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:51:28 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+15:51:28 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:51:35 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:55:05 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:55:06 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+15:55:38 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+15:55:39 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:55:50 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+15:55:50 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:55:59 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:57:25 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+15:57:26 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:59:23 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+15:59:23 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:59:58 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+15:59:58 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+16:05:33 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+16:05:33 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:07:15 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:07:15 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+16:22:10 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+16:22:11 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:25:49 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+16:25:50 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:30:18 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+16:30:18 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+16:33:06 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c:138:5: error: conflicting types for ‘receiveData’; have ‘int(int,  char *, struct sockaddr_in *, struct sockaddr_in *, int)’
+  138 | int receiveData(int sock, char *msg, struct sockaddr_in *fromAddr, struct sockaddr_in *echoServAddr, int client_len) {
+      |     ^~~~~~~~~~~
+../src/Client.c:21:5: note: previous declaration of ‘receiveData’ with type ‘int(int,  int,  char *, struct sockaddr_in *, struct sockaddr_in *, int)’
+   21 | int receiveData(int, int, char *msg, struct sockaddr_in*, struct sockaddr_in*, int);
+      |     ^~~~~~~~~~~
+make: *** [src/subdir.mk:20: src/Client.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:33:07 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:34:14 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c:138:5: error: conflicting types for ‘receiveData’; have ‘int(int,  char *, struct sockaddr_in *, struct sockaddr_in *, int)’
+  138 | int receiveData(int sock, char *msg, struct sockaddr_in *fromAddr, struct sockaddr_in *echoServAddr, int client_len) {
+      |     ^~~~~~~~~~~
+../src/Client.c:21:5: note: previous declaration of ‘receiveData’ with type ‘int(int,  int,  char *, struct sockaddr_in *, struct sockaddr_in *, int)’
+   21 | int receiveData(int, int, char *msg, struct sockaddr_in*, struct sockaddr_in*, int);
+      |     ^~~~~~~~~~~
+make: *** [src/subdir.mk:20: src/Client.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:34:14 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:35:10 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘main’:
+../src/Client.c:65:13: warning: unused variable ‘client_len’ [-Wunused-variable]
+   65 |         int client_len = sizeof(echoServAddr); // Set the client's size
+      |             ^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+16:35:10 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:35:20 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘main’:
+../src/Client.c:65:13: warning: unused variable ‘client_len’ [-Wunused-variable]
+   65 |         int client_len = sizeof(echoServAddr); // Set the client's size
+      |             ^~~~~~~~~~
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+16:35:20 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:35:53 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+16:35:53 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:37:53 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:37:53 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+16:42:25 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+../src/Client.c: In function ‘main’:
+../src/Client.c:47:31: warning: assignment to ‘char *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+   47 |                 host_input[1] = PROTOPORT;
+      |                               ^
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+16:42:26 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:43:13 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+16:43:13 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:43:37 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:43:38 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:46:40 **** Incremental Build of configuration Debug for project Client ****
+make all 
+Building file: ../src/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Client.d" -MT"src/Client.o" -o "src/Client.o" "../src/Client.c"
+Finished building: ../src/Client.c
+ 
+Building target: Client
+Invoking: GCC C Linker
+gcc  -o "Client" ./src/Client.o   
+Finished building target: Client
+ 
+16:46:41 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+In file included from ../src/Server.c:10:
+../src/Server.c: In function ‘main’:
+../src/Server.h:12:19: warning: passing argument 4 of ‘bindSocket’ makes integer from pointer without a cast [-Wint-conversion]
+   12 | #define PROTOPORT "56700"               // Default Server Port
+      |                   ^~~~~~~
+      |                   |
+      |                   char *
+../src/Server.c:32:73: note: in expansion of macro ‘PROTOPORT’
+   32 |         struct sockaddr_in sad = bindSocket(my_socket, sad, PROTO_ADDR, PROTOPORT);
+      |                                                                         ^~~~~~~~~
+../src/Server.c:14:63: note: expected ‘int’ but argument is of type ‘char *’
+   14 | struct sockaddr_in bindSocket(int, struct sockaddr_in, char*, int);
+      |                                                               ^~~
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+16:47:51 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:47:51 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+16:48:50 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:48:50 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:49:12 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:49:12 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+16:50:03 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:50:03 **** Incremental Build of configuration Debug for project Server ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:56:23 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:56:23 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:54:60: error: invalid type argument of ‘->’ (have ‘struct sockaddr_in’)
+   54 |                             he = gethostbyaddr((char *)&cad->sin_addr, sizeof(struct in_addr), AF_INET);
+      |                                                            ^~
+make: *** [src/subdir.mk:23: src/Server.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:56:47 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:56:48 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:54:60: error: invalid type argument of ‘->’ (have ‘struct sockaddr_in’)
+   54 |                             he = gethostbyaddr((char *)&cad->sin_addr, sizeof(struct in_addr), AF_INET);
+      |                                                            ^~
+make: *** [src/subdir.mk:23: src/Server.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:57:06 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:57:06 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:54:60: error: invalid type argument of ‘->’ (have ‘struct sockaddr_in’)
+   54 |                             he = gethostbyaddr((char *)&cad->sin_addr, sizeof(struct in_addr), AF_INET);
+      |                                                            ^~
+make: *** [src/subdir.mk:23: src/Server.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:57:56 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:57:56 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+../src/Server.c: In function ‘main’:
+../src/Server.c:54:29: error: cannot convert to a pointer type
+   54 |                             he = gethostbyaddr((char *)cad.sin_addr, sizeof(struct in_addr), AF_INET);
+      |                             ^~
+make: *** [src/subdir.mk:23: src/Server.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:59:38 **** Incremental Build of configuration Debug for project Client ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+16:59:38 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 

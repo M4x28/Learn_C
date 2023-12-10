@@ -1,0 +1,18 @@
+/*
+ * Client.h
+ *
+ *  Client Header file
+ *  Created on: November 9, 2023
+ *  Author: Leonardo Birardi
+ */
+
+#ifndef CLIENT_H_
+#define CLIENT_H_
+
+#define PROTOPORT "56700" 		// Default Server Port
+#define PROTO_ADDR "127.0.0.1"  // Default Server Address
+#define BUFFERSIZE 256  		// Default Buffer Size
+
+char msg[BUFFERSIZE];  			// Message Array
+
+#endif /* CLIENT_H_ */

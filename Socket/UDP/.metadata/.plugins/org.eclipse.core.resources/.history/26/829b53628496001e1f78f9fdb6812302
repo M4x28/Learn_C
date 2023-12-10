@@ -1,0 +1,5 @@
+src/Server.o: ../src/Server.c ../src/Headers.h ../src/Server.h \
+ ../src/Calculator.h
+../src/Headers.h:
+../src/Server.h:
+../src/Calculator.h:

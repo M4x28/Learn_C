@@ -1,0 +1,2 @@
+src/Calculator.o: ../src/Calculator.c ../src/Calculator.h
+../src/Calculator.h:

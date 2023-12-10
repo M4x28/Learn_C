@@ -1,0 +1,15 @@
+16:59:38 **** Incremental Build of configuration Debug for project Server ****
+make all 
+Building file: ../src/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Server.d" -MT"src/Server.o" -o "src/Server.o" "../src/Server.c"
+Finished building: ../src/Server.c
+ 
+Building target: Server
+Invoking: GCC C Linker
+gcc  -o "Server" ./src/Calculator.o ./src/Server.o   
+Finished building target: Server
+ 
+
+16:59:39 Build Finished. 0 errors, 0 warnings. (took 383ms)
+
